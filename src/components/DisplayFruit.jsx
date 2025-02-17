@@ -1,10 +1,12 @@
 import CardView from "./CardView"
 
-function DisplayFruit() {
+function DisplayFruit(props) {
 
     return(
         <div className="App-display">
-            <CardView />
+            {props.fruitlist.map(fruit => {
+                return <CardView key={fruit.id} fruit={fruit}/>
+            })}
         </div>
     )
 }

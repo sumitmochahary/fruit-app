@@ -1,17 +1,9 @@
-import fruitList from "./FruitDetails"
 
-function CardView() {
+function CardView(props) {
     return (
-      <div>
-        {fruitList.map((list) => (
-          <div className="App-card">
-            <p key={list.id}>
-              {list.fruitName}
-              <br />
-              {list.fruitPrice}
-            </p>
-          </div>
-        ))}
+      <div className="App-card">
+        <h3>{props.fruit.fruitName}</h3>
+        <p>{props.fruit.fruitPrice}</p>
       </div>
     );
 }

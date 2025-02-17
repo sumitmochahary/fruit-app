@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <DisplayFruit props={fruitList}/>
+      <DisplayFruit fruitlist={fruitList}/>
       <Footer />
     </div>
   );
